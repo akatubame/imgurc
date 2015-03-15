@@ -59,7 +59,7 @@ imgurc.exe [ -i or -t ] ["FilePath"] ["ChangedFileName"] [|more]
 
 imgurの画像共有APIには利用アプリケーション個別のIDが必要のため、  
 標準では imgurc.exe の名称で登録したClientIDを使用しています。  
-変更する場合は http://api.imgur.com/oauth2/addclient から適宜入手してください（※要ログイン）。  
+変更する場合は http://api.imgur.com/oauth2/addclient から適宜入手してください（※要ログイン）。
 
 その他、質問や機能の追加要望、バグ報告等は以下へどうぞ。
 
