@@ -49,11 +49,11 @@ imgurc.exe [ -i or -t ] ["FilePath"] ["ChangedFileName"] [|more]
 
 ### コマンドライン使用例：
 
-> ; imgurで画像を共有する  
-> C:\> imgurc.exe "-i" "C:\sample.jpg" |more  
+> imgurで画像を共有する  
+> C:\ > imgurc.exe "-i" "C:\sample.jpg" |more  
 > 
-> ; transfer.shでテキストファイルを共有する  
-> C:\> imgurc.exe "-t" "C:\sample.txt" |more
+> transfer.shでテキストファイルを共有する  
+> C:\ > imgurc.exe "-t" "C:\sample.txt" |more
 
 ##■終わりに  
 
