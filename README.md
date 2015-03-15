@@ -53,7 +53,7 @@ imgurc.exe [ -i or -t ] ["FilePath"] ["ChangedFileName"] [|more]
 > C:\> imgurc.exe "-i" "C:\sample.jpg" |more  
 > 
 > ; transfer.shでテキストファイルを共有する  
-> C:\> imgurc.exe "-t" "C:\sample.txt" "https://transfer.sh/sample.txt" |more
+> C:\> imgurc.exe "-t" "C:\sample.txt" |more
 
 ##■終わりに  
 
