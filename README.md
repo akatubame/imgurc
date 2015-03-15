@@ -19,8 +19,8 @@ Windows7で動作確認済み。
 
 主な機能は以下のとおり。
 
-- 画像を[imgur](http://imgur.com/) へアップロード
-- 任意のファイルを[transfer.sh](https://transfer.sh/) へアップロード
+- 画像を [imgur](http://imgur.com/) へアップロード
+- 任意のファイルを [transfer.sh](https://transfer.sh/) へアップロード
 - アップロードされたファイルのURLの取得（標準出力STDOUT）
 
 ##■使い方
