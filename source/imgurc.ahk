@@ -30,18 +30,18 @@ EnvSet, A_ImgurClientID, d126ca2764a1d42
 args := A_Init_Object["CmdArgs"]
 
 ; アップロードする画像が存在しなければエラー
-file := args[1]
+file := args[2]
 If ( !FileExist(file) ) {
 	ErrorAndExit("Not Found File: " file)
 }
 
-; 第二引数の値でアップロードするサービスを選択(省略すると"-i"を選択)
+; 第一引数の値でアップロードするサービスを選択
 ;   [-i] = imgur.com
 ;   [-t] = transfer.sh
-server := args[2]
+server := args[1]
 
 ; imgur.comで画像の共有
-If (server == "" or server == "-i") {
+If (server == "-i") {
 	url := _UploadImageToImgur(file)
 }
 ; transfer.shで各種ファイルの共有
