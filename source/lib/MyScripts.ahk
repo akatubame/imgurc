@@ -7,6 +7,7 @@
 
 ; 指定文字列をコマンドプロンプトに標準出力
 _Printf(str){
+	; 文字コードをShift_JISに
 	FileEncoding, CP932
 	
 	; 出力の整形処理
@@ -57,13 +58,13 @@ _UploadFileToTransferSh(file, newFileName=""){
 ; 指定画像ファイルをimgur.comへアップロード
 _UploadImageToImgur(file){
 	
-	; 画像をアップロード、成功すればHTTPレスポンスからURLを取得
-	setRequestHeader := []
-	setRequestHeader.Insert("Authorization", "Client-ID " A_ImgurClientID)
-	uploadURL := _Http_FileUpload("POST", file, "https://api.imgur.com/3/upload", setRequestHeader)
+	; 画像をアップロード、成功すればHTTPレスポンスを取得
+	SetRequestHeader := []
+	SetRequestHeader.Insert("Authorization", "Client-ID " A_ImgurClientID)
+	ResponseText := _Http_FileUpload("POST", file, "https://api.imgur.com/3/upload", SetRequestHeader)
 	
-	; アップロード画像のURLを整形
-	If (RegExMatch(uploadURL, "i)""link"":""http:\\/\\/(.*?(jpg|jpeg|png|gif|apng|tiff|tif|bmp|pdf|xcf))""}", $))
+	; HTTPレスポンスからアップロード画像のURLを抽出
+	If (RegExMatch(ResponseText, "i)""link"":""http:\\/\\/(.*?(jpg|jpeg|png|gif|apng|tiff|tif|bmp|pdf|xcf))""}", $))
 		uploadURL := "https://" RegExReplace($1, "\\/", "/")
 	
 	return uploadURL
